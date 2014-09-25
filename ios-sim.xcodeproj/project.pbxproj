@@ -12,6 +12,7 @@
 		2481364E115A750000E3A9BA /* nsprintf.m in Sources */ = {isa = PBXBuildFile; fileRef = 2481364B115A750000E3A9BA /* nsprintf.m */; };
 		51448B3412BCF637001F99BD /* NSString+expandPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 51448B3312BCF637001F99BD /* NSString+expandPath.m */; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		FF21C17D19D46EF40018CD3D /* iPhoneSimulatorDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C17C19D46EF40018CD3D /* iPhoneSimulatorDefs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		51448B3312BCF637001F99BD /* NSString+expandPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+expandPath.m"; path = "Source/NSString+expandPath.m"; sourceTree = "<group>"; };
 		51448B3512BD0328001F99BD /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = Source/version.h; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* ios-sim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ios-sim"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF21C17B19D46EF40018CD3D /* iPhoneSimulatorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iPhoneSimulatorDefs.h; path = Source/iPhoneSimulatorDefs.h; sourceTree = "<group>"; };
+		FF21C17C19D46EF40018CD3D /* iPhoneSimulatorDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iPhoneSimulatorDefs.m; path = Source/iPhoneSimulatorDefs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				51448B3212BCF637001F99BD /* NSString+expandPath.h */,
 				51448B3312BCF637001F99BD /* NSString+expandPath.m */,
 				51448B3512BD0328001F99BD /* version.h */,
+				FF21C17B19D46EF40018CD3D /* iPhoneSimulatorDefs.h */,
+				FF21C17C19D46EF40018CD3D /* iPhoneSimulatorDefs.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF21C17D19D46EF40018CD3D /* iPhoneSimulatorDefs.m in Sources */,
 				2481364C115A750000E3A9BA /* iPhoneSimulator.m in Sources */,
 				2481364D115A750000E3A9BA /* main.m in Sources */,
 				2481364E115A750000E3A9BA /* nsprintf.m in Sources */,

@@ -10,6 +10,8 @@
 #import "nsprintf.h"
 #import <sys/types.h>
 #import <sys/stat.h>
+#import "iPhoneSimulatorDefs.h"
+
 @class DTiPhoneSimulatorSystemRoot;
 
 NSString *simulatorPrefrencesName = @"com.apple.iphonesimulator";
@@ -22,16 +24,6 @@ NSString *deviceIpad = @"iPad";
 NSString *deviceIpadRetina = @"iPad Retina";
 NSString *deviceIpadRetina_64bit = @"iPad Retina (64-bit)";
 
-NSString* deviceTypeIdIphone4s = @"com.apple.CoreSimulator.SimDeviceType.iPhone-4s";
-NSString* deviceTypeIdIphone5 = @"com.apple.CoreSimulator.SimDeviceType.iPhone-5";
-NSString* deviceTypeIdIphone5s = @"com.apple.CoreSimulator.SimDeviceType.iPhone-5s";
-NSString* deviceTypeIdIphone6 = @"com.apple.CoreSimulator.SimDeviceType.iPhone-6";
-NSString* deviceTypeIdIphone6Plus = @"com.apple.CoreSimulator.SimDeviceType.iPhone-6-Plus";
-NSString* deviceTypeIdIpad2 = @"com.apple.CoreSimulator.SimDeviceType.iPad-2";
-NSString* deviceTypeIdIpadRetina = @"com.apple.CoreSimulator.SimDeviceType.iPad-Retina";
-NSString* deviceTypeIdIpadAir = @"com.apple.CoreSimulator.SimDeviceType.iPad-Air";
-NSString* deviceTypeIdResizableIphone = @"com.apple.CoreSimulator.SimDeviceType.Resizable-iPhone";
-NSString* deviceTypeIdResizeableIpad = @"com.apple.CoreSimulator.SimDeviceType.Resizable-iPad";
 
 // The path within the developer dir of the private Simulator frameworks.
 NSString* const kSimulatorFrameworkRelativePathLegacy = @"Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/DVTiPhoneSimulatorRemoteClient.framework";
@@ -471,30 +463,30 @@ static void ChildSignal(int arg) {
     NSString* devTypeId = self->deviceTypeId;
 
     if (!devTypeId) {
-        devTypeId = deviceTypeIdIphone5;
+        devTypeId = IPSDeviceTypeIdiPhone5;
         if (retina) {
             if ([family isEqualToString:@"ipad"]) {
                 if (is64Bit) {
-                    devTypeId = deviceTypeIdIpadAir;
+                    devTypeId = IPSDeviceTypeIdiPadAir;
                 } else {
-                    devTypeId = deviceTypeIdIpadRetina;
+                    devTypeId = IPSDeviceTypeIdiPadRetina;
                 }
             } else {
                 if (isTallDevice) {
                     if (is64Bit) {
-                        devTypeId = deviceTypeIdIphone5s;
+                        devTypeId = IPSDeviceTypeIdiPhone5s;
                     } else {
-                        devTypeId = deviceTypeIdIphone5;
+                        devTypeId = IPSDeviceTypeIdiPhone5;
                     }
                 } else {
-                    devTypeId = deviceTypeIdIphone4s;
+                    devTypeId = IPSDeviceTypeIdiPhone4s;
                 }
             }
         } else {
             if ([family isEqualToString:@"ipad"]) {
-                devTypeId = deviceTypeIdIpad2;
+                devTypeId = IPSDeviceTypeIdiPad2;
             } else {
-                devTypeId = deviceTypeIdIphone4s;
+                devTypeId = IPSDeviceTypeIdiPhone4s;
             }
         }
     }
